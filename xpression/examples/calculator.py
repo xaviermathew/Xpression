@@ -7,7 +7,6 @@ op_map = {
     '-': builtin_operator.sub,
     '*': builtin_operator.mul,
     '/': builtin_operator.div,
-
 }
 
 
