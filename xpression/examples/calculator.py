@@ -23,9 +23,11 @@ def eval_binary_expression(lhs, operator, rhs):
 
 
 def parse(expression):
-    parser = Parser({'+', '-', '*', '/'}, eval_node_from_str, eval_binary_expression)
+    parser = Parser(op_set=op_map.keys(),
+                    eval_node_from_str=eval_node_from_str,
+                    eval_binary_expression=eval_binary_expression)
     return parser.parse(expression)
 
 
 q = '((1 + 1) * (2 + 2)) / ((5 + 2) + 1)'
-parse(q)
+print parse(q)
