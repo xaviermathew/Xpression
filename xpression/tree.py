@@ -46,9 +46,9 @@ class OP(object):
     @classmethod
     def eval_node(cls, s):
         if isinstance(s, basestring):
-            return '(%s)' % cls.eval_node_from_str(s)
+            return cls.eval_node_from_str(s)
         else:
-            return '(%s)' % cls.eval(s)
+            return cls.eval(s)
 
     @classmethod
     def eval(cls, op):
